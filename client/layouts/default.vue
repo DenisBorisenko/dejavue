@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -37,9 +37,8 @@
       </v-btn>
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
+      <v-btn class="mx-1" color="accent" elevation="2" rounded>Sign In</v-btn>
+      <v-btn class="mx-1" color="primary" elevation="2" rounded>Sign Up</v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
