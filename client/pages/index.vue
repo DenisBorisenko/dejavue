@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4" data-test="index-page">
     <Header :content="$t('header')" />
   </div>
 </template>
