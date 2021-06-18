@@ -1,0 +1,11 @@
+{
+  "header": {
+    "signIn": "войти",
+    "signUp": "зарегистрироваться"
+  },
+  "mainBanner": {
+    "title": "<strong>Кликни</strong> и добавь <br /> <strong>Кликни</strong> и выучи <br /> <strong>Кликни</strong> и поделись <br /> <strong>Кликни</strong> и повтори",
+    "subtitle": "<strong>Легкий</strong> путь обучения приблизит тебя к <strong>мечте</strong>",
+    "buttonText": "Хочу начать"
+  }
+}

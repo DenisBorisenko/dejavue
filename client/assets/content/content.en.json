@@ -1,0 +1,11 @@
+{
+  "header": {
+    "signIn": "sign in",
+    "signUp": "sign up"
+  },
+  "mainBanner": {
+    "title": "<strong>Click</strong> to add <br /> <strong>Click</strong> to learn <br /> <strong>Click</strong> to share <br /> <strong>Click</strong> to repeat",
+    "subtitle": "A <strong>simple</strong> way to learning brings you closer to your <strong>dreams</strong>",
+    "buttonText": "Start my way"
+  }
+}
