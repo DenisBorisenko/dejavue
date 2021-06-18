@@ -1,5 +1,8 @@
 <template>
-  <header class="py-4 flex md:items-center md:justify-between relative">
+  <header
+    class="py-4 flex md:items-center md:justify-between relative"
+    data-test="header-component"
+  >
     <div class="flex-1 min-w-0">
       <h2
         class="
@@ -13,7 +16,11 @@
         LOGO
       </h2>
     </div>
-    <button class="flex md:hidden w-8 h-8 p-1" @click="handleBurgerButton">
+    <button
+      class="flex md:hidden w-8 h-8 p-1"
+      data-test="header-burger-button"
+      @click="handleBurgerButton"
+    >
       <svg
         fill="currentColor"
         viewBox="0 0 20 20"
@@ -61,6 +68,7 @@
           transition
           duration-200
         "
+        data-test="header-button"
       >
         {{ content.signIn }}
       </button>
@@ -89,6 +97,7 @@
           duration-200
           text-center
         "
+        data-test="header-button"
       >
         {{ content.signUp }}
       </button>

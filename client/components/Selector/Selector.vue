@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="h-full relative">
+    <div class="h-full relative" data-test="selector-component">
       <button
         type="button"
         class="
@@ -25,6 +25,7 @@
         aria-haspopup="listbox"
         aria-expanded="true"
         aria-labelledby="listbox-label"
+        data-test="selector-button"
         @click="setOptionsIsViible(true)"
       >
         <span class="block truncate"> {{ currentValue }} </span>
@@ -78,17 +79,13 @@
         aria-labelledby="listbox-label"
         aria-activedescendant="listbox-option-3"
       >
-        <!--
-        Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
-
-        Highlighted: "text-white bg-indigo-600", Not Highlighted: "text-gray-900"
-      -->
         <li
           v-for="(option, index) in options"
           id="listbox-option-0"
           :key="index"
           class="text-gray-900 cursor-default select-none relative"
           role="option"
+          data-test="selector-option"
         >
           <button
             class="
@@ -101,6 +98,7 @@
               w-full
               cursor-pointer
             "
+            data-test="selector-option-button"
             @click="setValue(option)"
           >
             <span class="font-normal block truncate ali text-center">
