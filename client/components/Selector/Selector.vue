@@ -1,48 +1,20 @@
 <template>
   <div>
-    <div class="h-full relative" data-test="selector-component">
+    <div class="selector" data-test="selector-component">
       <button
         type="button"
-        class="
-          bg-white
-          relative
-          w-full
-          h-full
-          border border-gray-300
-          rounded-md
-          shadow-sm
-          pl-3
-          pr-10
-          py-2
-          text-left
-          cursor-pointer
-          focus:outline-none
-          focus:ring-1
-          focus:ring-indigo-500
-          focus:border-indigo-500
-          sm:text-sm
-        "
+        class="selector__button"
         aria-haspopup="listbox"
         aria-expanded="true"
         aria-labelledby="listbox-label"
+        :aria-label="content.languageSelector"
         data-test="selector-button"
-        @click="setOptionsIsViible(true)"
+        @click="setOptionsIsViible(!optionsIsVisible)"
       >
-        <span class="block truncate"> {{ currentValue }} </span>
-        <span
-          class="
-            absolute
-            inset-y-0
-            right-0
-            flex
-            items-center
-            pr-2
-            pointer-events-none
-          "
-        >
-          <!-- Heroicon name: solid/selector -->
+        <span class="selector__button-text"> {{ currentValue }} </span>
+        <span class="selector__button-icon-wrapper">
           <svg
-            class="h-5 w-5 text-gray-400"
+            class="selector__button-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -58,22 +30,7 @@
       </button>
       <ul
         v-show="optionsIsVisible"
-        class="
-          absolute
-          z-10
-          mt-1
-          w-full
-          bg-white
-          shadow-lg
-          max-h-60
-          rounded-md
-          py-1
-          text-base
-          ring-1 ring-black ring-opacity-5
-          overflow-auto
-          focus:outline-none
-          sm:text-sm
-        "
+        class="selector__list"
         tabindex="-1"
         role="listbox"
         aria-labelledby="listbox-label"
@@ -83,25 +40,16 @@
           v-for="(option, index) in options"
           id="listbox-option-0"
           :key="index"
-          class="text-gray-900 cursor-default select-none relative"
+          class="selector__list-item"
           role="option"
           data-test="selector-option"
         >
           <button
-            class="
-              text-gray-900
-              cursor-default
-              select-none
-              relative
-              py-2
-              px-2
-              w-full
-              cursor-pointer
-            "
+            class="selector__list-item-button"
             data-test="selector-option-button"
             @click="setValue(option)"
           >
-            <span class="font-normal block truncate ali text-center">
+            <span class="selector__list-item-button-text">
               {{ option }}
             </span>
           </button>
@@ -122,6 +70,10 @@ export default {
       type: Array,
       required: true,
     },
+    content: {
+      type: Object,
+      default: () => ({}),
+    },
   },
   data: () => ({
     optionsIsVisible: false,
@@ -137,3 +89,7 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+@import 'Selector';
+</style>

@@ -1,0 +1,35 @@
+.selector {
+  @apply h-full relative;
+
+  &__button {
+    @apply bg-white relative w-full h-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-pointer focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+  }
+
+  &__button-text {
+    @apply block truncate;
+  }
+
+  &__button-icon-wrapper {
+    @apply absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none;
+  }
+
+  &__button-icon {
+    @apply h-5 w-5 text-gray-400;
+  }
+
+  &__list {
+    @apply absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm;
+  }
+
+  &__list-item {
+    @apply text-gray-900 cursor-default select-none relative;
+  }
+
+  &__list-item-button {
+    @apply text-gray-900 cursor-default select-none relative py-2 px-2 w-full cursor-pointer;
+  }
+
+  &__list-item-button-text {
+    @apply font-normal block truncate text-center;
+  }
+}

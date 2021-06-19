@@ -1,7 +1,10 @@
 {
   "header": {
     "signIn": "войти",
-    "signUp": "зарегистрироваться"
+    "signUp": "зарегистрироваться",
+    "openMenu": "Открыть меню с кнопками",
+    "closeMenu": "Закрыть меню с кнопками",
+    "languageSelector": "окно выбора языка"
   },
   "mainBanner": {
     "title": "<strong>Кликни</strong> и добавь <br /> <strong>Кликни</strong> и выучи <br /> <strong>Кликни</strong> и поделись <br /> <strong>Кликни</strong> и повтори",

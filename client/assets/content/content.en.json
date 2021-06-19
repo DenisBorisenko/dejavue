@@ -1,7 +1,10 @@
 {
   "header": {
     "signIn": "sign in",
-    "signUp": "sign up"
+    "signUp": "sign up",
+    "openMenu": "Open menu with buttons",
+    "closeMenu": "Close menu with buttons",
+    "languageSelector": "language selector"
   },
   "mainBanner": {
     "title": "<strong>Click</strong> to add <br /> <strong>Click</strong> to learn <br /> <strong>Click</strong> to share <br /> <strong>Click</strong> to repeat",

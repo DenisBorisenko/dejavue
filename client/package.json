@@ -17,7 +17,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
-    "nuxt-i18n": "^6.27.1"
+    "nuxt-i18n": "^6.27.1",
+    "sass-mq": "^5.0.1"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^0.2.2",
@@ -35,8 +36,10 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
     "jest": "^27.0.4",
+    "node-sass": "^5.0.0",
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
+    "sass-loader": "^10.0.1",
     "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^21.0.0",

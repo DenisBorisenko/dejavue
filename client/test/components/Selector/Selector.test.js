@@ -31,6 +31,12 @@ describe('Selector Component', () => {
     expect(wrapper.vm.optionsIsVisible).toBe(true)
   })
 
+  it('options opened on second click', () => {
+    wrapper.find('[data-test="selector-button"]').trigger('click')
+
+    expect(wrapper.vm.optionsIsVisible).toBe(false)
+  })
+
   it('closed after select', () => {
     wrapper.find('[data-test="selector-option-button"]').trigger('click')
 
