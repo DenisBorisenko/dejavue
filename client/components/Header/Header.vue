@@ -1,7 +1,7 @@
 <template>
   <header class="header" data-test="header-component">
     <div class="header__logo-wrapper">
-      <h2 class="header__logo">LOGO</h2>
+      <Logo class="header__logo" />
     </div>
     <button
       class="header__burger-button"
@@ -40,11 +40,13 @@
 <script>
 import Selector from '../Selector/Selector.vue'
 import BurgerButtonIcon from '../Icons/BurgerButtonIcon'
+import Logo from '../Icons/Logo.vue'
 
 export default {
   components: {
     Selector,
     BurgerButtonIcon,
+    Logo,
   },
   props: {
     content: {

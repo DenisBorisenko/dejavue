@@ -1,12 +1,25 @@
+@import '../../assets/styles/variables.scss';
+
 .selector {
   @apply h-full relative;
 
   &__button {
-    @apply bg-white relative w-full h-full border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-pointer focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+    @apply bg-white relative w-full h-full border rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-pointer sm:text-sm;
+
+    border-color: $bondi-blue;
+
+    outline: none;
+
+    &:focus {
+      box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, $bondi-blue 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+      outline: none;
+    }
   }
 
   &__button-text {
-    @apply block truncate;
+    @apply font-bold block truncate;
+
+    color: $bondi-blue;
   }
 
   &__button-icon-wrapper {
@@ -14,7 +27,9 @@
   }
 
   &__button-icon {
-    @apply h-5 w-5 text-gray-400;
+    @apply h-5 w-5;
+
+    color: $bondi-blue;
   }
 
   &__list {
@@ -27,10 +42,14 @@
 
   &__list-item-button {
     @apply text-gray-900 cursor-default select-none relative py-2 px-2 w-full cursor-pointer;
+
+    outline-color: $bondi-blue;
   }
 
   &__list-item-button-text {
-    @apply font-normal block truncate text-center;
+    @apply font-bold block truncate text-center;
+
+    color: $bondi-blue;
   }
 }
 
