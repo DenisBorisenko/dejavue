@@ -28,33 +28,35 @@
           </svg>
         </span>
       </button>
-      <ul
-        v-show="optionsIsVisible"
-        class="selector__list"
-        tabindex="-1"
-        role="listbox"
-        aria-labelledby="listbox-label"
-        aria-activedescendant="listbox-option-3"
-      >
-        <li
-          v-for="(option, index) in options"
-          id="listbox-option-0"
-          :key="index"
-          class="selector__list-item"
-          role="option"
-          data-test="selector-option"
+      <transition name="fade">
+        <ul
+          v-if="optionsIsVisible"
+          class="selector__list"
+          tabindex="-1"
+          role="listbox"
+          aria-labelledby="listbox-label"
+          aria-activedescendant="listbox-option-3"
         >
-          <button
-            class="selector__list-item-button"
-            data-test="selector-option-button"
-            @click="setValue(option)"
+          <li
+            v-for="(option, index) in options"
+            id="listbox-option-0"
+            :key="index"
+            class="selector__list-item"
+            role="option"
+            data-test="selector-option"
           >
-            <span class="selector__list-item-button-text">
-              {{ option }}
-            </span>
-          </button>
-        </li>
-      </ul>
+            <button
+              class="selector__list-item-button"
+              data-test="selector-option-button"
+              @click="setValue(option)"
+            >
+              <span class="selector__list-item-button-text">
+                {{ option }}
+              </span>
+            </button>
+          </li>
+        </ul>
+      </transition>
     </div>
   </div>
 </template>

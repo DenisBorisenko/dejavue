@@ -16,12 +16,11 @@
   }
 
   &__menu-container {
-    @apply flex flex-col md:flex-row md:flex mt-4 md:mt-0 md:ml-4 md:visible absolute md:static top-10 w-full box-border md:w-auto;
-
+    @apply transform translate-x-0 visible opacity-100 flex flex-col md:flex-row md:flex mt-4 md:mt-0 md:ml-4 md:visible absolute md:static top-10 w-full box-border md:w-auto transition duration-200;
 
     @include mq($until: 767px) {
       &--hidden {
-        @apply hidden;
+        @apply invisible opacity-0 transform translate-x-full transition-all duration-200;
       }
     }
   }

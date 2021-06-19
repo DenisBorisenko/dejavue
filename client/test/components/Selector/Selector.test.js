@@ -15,12 +15,6 @@ describe('Selector Component', () => {
     expect(wrapper.find('[data-test="selector-component"]').exists()).toBe(true)
   })
 
-  it('options rendered', () => {
-    expect(wrapper.findAll('[data-test="selector-option"]')).toHaveLength(
-      testOptions.length
-    )
-  })
-
   it('options closed', () => {
     expect(wrapper.vm.optionsIsVisible).toBe(false)
   })
@@ -31,14 +25,21 @@ describe('Selector Component', () => {
     expect(wrapper.vm.optionsIsVisible).toBe(true)
   })
 
-  it('options opened on second click', () => {
-    wrapper.find('[data-test="selector-button"]').trigger('click')
-
-    expect(wrapper.vm.optionsIsVisible).toBe(false)
+  it('options rendered', () => {
+    expect(wrapper.findAll('[data-test="selector-option"]')).toHaveLength(
+      testOptions.length
+    )
   })
 
   it('closed after select', () => {
     wrapper.find('[data-test="selector-option-button"]').trigger('click')
+
+    expect(wrapper.vm.optionsIsVisible).toBe(false)
+  })
+
+  it('options closed on second click', () => {
+    wrapper.find('[data-test="selector-button"]').trigger('click')
+    wrapper.find('[data-test="selector-button"]').trigger('click')
 
     expect(wrapper.vm.optionsIsVisible).toBe(false)
   })
